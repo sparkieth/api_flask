@@ -7,12 +7,13 @@ def spacy_func(jsonfile):
 
     """
     NOTA IMPORTANTE:
+    
     Tanto en mi IDE como en google colab intenté correr el modelo o 'es_core_news_sm' para español, sin éxito. 
     En ambos IDEs me arrojan el mismo error: 
 
     OSError: [E050] Can't find model 'es_core_news_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
 
-    POR ELLO, decidí utilizar el modelo en inglés 'en_core_web_sm', entiendo no va a arrojar los mismos resultados ni los mejores, pero corre.
+    POR ELLO, decidí utilizar el modelo en inglés 'en_core_web_sm', entiendo no va a arrojar los mismos resultados ni los mejores.
 
     Lamento la inconveniencia
     """
