@@ -7,7 +7,7 @@ def spacy_func(jsonfile):
 
     """
     NOTA IMPORTANTE:
-    
+
     Tanto en mi IDE como en google colab intenté correr el modelo o 'es_core_news_sm' para español, sin éxito. 
     En ambos IDEs me arrojan el mismo error: 
 
@@ -33,7 +33,7 @@ def spacy_func(jsonfile):
         for i in range(T):
             k=ents[i]
             v=ents[i].label_
-            dic[j].update({'oracion':oracion[j],'entidades':{k:v}})
+            dic[j].update({'oración':oracion[j],'entidades':{k:v}})
     
     return dic
 """
@@ -42,7 +42,7 @@ Desafortunadamente, encontré el siguiente error cuando quise compilar la app de
 
 "zsh: illegal hardware instruction  python api_prueba.py"
 
-Por ello, no pude probar la página. La siguiente es una estructura de la que partiría para hacer la app de Flask.
+Por ello, llegó un punto en el que no pude probar la página. La siguiente es una estructura de la que partiría para hacer la app de Flask.
 """
 
 app= Flask(__name__)
