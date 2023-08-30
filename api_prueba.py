@@ -3,7 +3,7 @@ import numpy as np
 from flask import Flask, request,jsonify
 
 def spacy_func(jsonfile):
-    nlp = spacy.load('en_core_web_sm')
+    nlp = spacy.load('es_core_news_sm')
     oracion=jsonfile['oraciones']
     T1=np.shape(oracion)[0]
     dic={}
