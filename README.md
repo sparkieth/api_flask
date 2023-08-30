@@ -6,3 +6,4 @@ Ejercicio en el que se utiliza la librería Spacy para identificar nombres propi
 2. se habilita el método POST
 3. se introduce el objeto JSON con las oraciones a analizar
 
+Es importante que el objeto de entrada JSON tenga las mismas características que el que se dio como prueba
