@@ -4,7 +4,19 @@ from flask import Flask, request,jsonify
 
 def spacy_func(jsonfile):
     # 1. se llama la libería de Spacy que se utilizará
-    nlp = load('es_core_news_sm')
+
+    """
+    NOTA IMPORTANTE:
+    Tanto en mi IDE como en google colab intenté correr el modelo o 'es_core_news_sm' para español, sin éxito. 
+    En ambos IDEs me arrojan el mismo error: 
+
+    OSError: [E050] Can't find model 'es_core_news_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
+
+    POR ELLO, decidí utilizar el modelo en inglés 'en_core_web_sm', entiendo no va a arrojar los mismos resultados ni los mejores, pero corre.
+
+    Lamento la inconveniencia
+    """
+    nlp = load('en_core_web_sm')
     # 2. se extraen las oraciones
     oracion=jsonfile['oraciones']
     T1=np.shape(oracion)[0]
@@ -20,9 +32,9 @@ def spacy_func(jsonfile):
         for i in range(T):
             k=ents[i]
             v=ents[i].label_
-            dic[j].update({k:v})
-            
-    return 
+            dic[j].update({'oracion':oracion[j],'entidades':{k:v}})
+    
+    return dic
 """
 DISCLAIMER
 Desafortunadamente, encontré el siguiente error cuando quise compilar la app de Flask
